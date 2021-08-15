@@ -1,12 +1,7 @@
 #!/usr/bin/env groovy
 pipeline{
     agent any
-    stages{
-        stage("cleaning the work space"){
-            steps{
-                sh 'rm -rf *'
-            }
-        }      
+    stages{   
         stage("testing maven"){
             steps{
                 dir("mvn"){
